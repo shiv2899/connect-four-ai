@@ -8,6 +8,10 @@ AI that learns Connect Four only by playing against itself, using the same idea 
 
 ![2-Player Win](results/connect_four_2player_win.png)
 
+MCTS AI (O) ne Diagonal se jeeta:
+
+![AI Wins](results/ai_wins_mcts.png)
+
 ## How it Works (5 Phases)
 - **Phase 1:** Game - board, legal moves, win check
 - **Phase 2:** MCTS - Monte Carlo Tree Search, no neural network
@@ -21,13 +25,16 @@ pip install -r requirements.txt
 cd src
 python play.py      # 2-Player game
 python test_game.py # Game tests
+python play_vs_ai.py   # Tu (X) vs MCTS AI (O)
 ```
 
 ## Files
 - `src/game.py` - Connect Four board + win logic
+- `src/mcts.py` - MCTS AI, 500 simulations soch ke chaal chalega
+- `src/play_vs_ai.py` - Tu vs AI game
 - `src/play.py` - 2-Player game
 - `src/test_game.py` - Game tests
 
 ## Results
 - Phase 1: Game working, all tests pass
-- Phase 2-5: Coming soon
+- Phase 2: MCTS AI working, AI ne Diagonal se jeet ke dikhaya
