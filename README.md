@@ -12,6 +12,10 @@ MCTS AI (O) ne Diagonal se jeeta:
 
 ![AI Wins](results/ai_wins_mcts.png)
 
+Tu ne Trained AlphaZero AI ko Vertical XXXX se haraya:
+
+![Beat Trained AI](results/trained_ai_loss.png)
+
 ## How it Works (5 Phases)
 - **Phase 1:** Game - board, legal moves, win check
 - **Phase 2:** MCTS - Monte Carlo Tree Search, no neural network
@@ -26,6 +30,8 @@ cd src
 python play.py      # 2-Player game
 python test_game.py # Game tests
 python play_vs_ai.py   # Tu (X) vs MCTS AI (O)
+python train.py   # 100 self-play games se train karo
+python play_vs_trained.py   # Tu vs Trained AI
 ```
 
 ## Files
@@ -34,7 +40,11 @@ python play_vs_ai.py   # Tu (X) vs MCTS AI (O)
 - `src/play_vs_ai.py` - Tu vs AI game
 - `src/play.py` - 2-Player game
 - `src/test_game.py` - Game tests
+- `src/network.py` - Policy/Value Network, 58,519 parameters
+- `src/train.py` - Self-Play Training, 100 games
+- `src/play_vs_trained.py` - Tu vs Trained AI
 
 ## Results
 - Phase 1: Game working, all tests pass
 - Phase 2: MCTS AI working, AI ne Diagonal se jeet ke dikhaya
+- Phase 3: AlphaZero Network + Self-Play Training working, 100 games, Tu ne Trained AI ko haraya
